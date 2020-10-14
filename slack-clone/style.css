@@ -7,25 +7,144 @@ paragraph grey: #5b5e6d;
 nav grey: #5b5e6d;
 */
 
-nav ul {
-    background: lightblue;
-    display: flex;
-    flex-wrap: row wrap;
-    justify-content: flex-end;    
-    padding: 0;
+/* Investigar para que funciona este bloque, lo he visto en varios ejemplos */
+* {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #2C303F;
+}
+
+p, li, input, button {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 17px;
+    color: #5b5e6d;
+    margin: 10px 0;
+}
+
+nav {    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 8%;
+}
+
+nav img {
+    height: 45px;
+}
+
+nav ul {
     list-style: none;
 }
 
-nav li {
-    background: lightcoral;
-    padding: 10px;
+/* Burger menu icon */
+nav ul div {
+    width: 30px;
+    height: 4px;
+    background-color: #5b5e6d;;
+    margin: 4px 0;
 }
 
-nav li div {
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 6px 0;
-  }
+header {
+    justify-content: center;
+    padding: 2% 8%;
+    text-align: center;
+}
+
+header h1 {
+    text-align: left;
+    padding: 20px 0 20px 0;
+}
+
+header .text-intro {
+    text-align: left;
+}
+
+header input {
+    padding: 15px 15px;
+    width: 100%;
+    text-align: left;
+    border: solid 1px #babcc4;
+    border-radius: 5px;    
+}
+
+header button {
+    padding: 15px;
+    width: 100%;
+    background: #192592;
+    border: solid 1px #192592;   
+    color: white;
+    border-radius: 5px;
+}
+
+header a {
+    color: #192592;
+}
+
+header img {
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.logos {
+    justify-content: center;
+    padding: 2% 8%;
+    text-align: center;    
+    background-color: #F4F3F4;
+}
+
+.logos h2 {
+    padding: 40px 0 20px 0;    
+}
+
+.logos button {
+    padding: 15px;
+    width: 100%;
+    background: white;
+    border: solid 1px #192592;   
+    color: #192592;
+    border-radius: 5px;
+}
+
+.logos img {    
+    width: 60%;
+    padding: 30px;
+}
+
+.try {    
+    justify-content: center;
+    padding: 2% 8%;
+    text-align: center;     
+}
+
+.try h2 {
+    padding: 40px 0 0 0;    
+}
+
+.try button {
+    padding: 15px;
+    width: 100%;
+    background: #192592;
+    border: solid 1px #192592;   
+    color: white;
+    border-radius: 5px;
+}
+
+.try input {
+    padding: 15px 15px;
+    width: 100%;
+    text-align: left;
+    border: solid 1px #babcc4;
+    border-radius: 5px;    
+}
+
+footer img {
+    margin-top: 10px;
+    width: 100px;
+    height: auto;
+}
 
