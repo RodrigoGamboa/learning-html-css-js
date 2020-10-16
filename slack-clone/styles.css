@@ -1,0 +1,233 @@
+/* Colores */
+/*
+background-grey: #F4F3F4;
+button-purple: #192592
+main-titles dark-grey: #2C303F;
+paragraph grey: #5b5e6d;
+nav grey: #5b5e6d;
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #333746;
+}
+
+p, li, input, button {
+    font-family: 'Quicksand', sans-serif;
+}
+
+p, li {
+    color: #5B5E6C; 
+}
+
+a {
+    color: #4549A9;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    background-color: white;
+
+    /* ¿Por qué position: sticky? */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul div {
+    width: 23px;
+    height: 3px;
+    background-color: #6D6F7A;
+    margin: 4px 0;
+}
+
+body hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);   
+}
+
+header {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px 0 30px;
+}
+
+header h1 {
+    font-size: 30px;
+    font-weight: bold;
+    align-self: flex-start;
+    padding: 0 60px 0 0;
+}
+
+header p {
+    color: #5B5E6C;
+}
+
+header .text-intro {    
+    margin: 30px 0;
+    font-size: 16px;
+}
+
+header input {
+    align-self: stretch;
+    height: 55px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+    padding: 15px;
+    color: #757575;   
+}
+
+header button {
+    align-self: stretch;
+    height: 55px;
+    border-radius: 5px;
+    border: 0;
+    background-color: #4549A9;
+    color: white; 
+    margin: 0 0 15px 0; 
+    font-weight: bold;    
+}
+
+header img {
+    width: 100%;
+    height: auto;
+    margin: 50px 0 0 0;
+}
+
+main .logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px 70px 30px;
+    background-color: #F5F5F5;
+}
+
+main .logos h2 {
+    margin: 30px 0 0 0;
+    font-size: 30px;
+}
+
+main .logos p {
+    text-align: center;
+    margin: 20px 0;
+}
+
+main .logos button {
+    align-self: stretch;
+    height: 55px;
+    border-radius: 5px;
+    border: 1px solid rgba(69, 72, 168, 0.8);    
+    background-color: white;
+    color: #4549A9;
+    margin: 15px 0 15px 0; 
+    font-weight: bold;
+}
+
+main .logos img {
+    width: 60%;
+    height: auto;
+    margin: 40px 0 40px;
+}
+
+main .logos hr {
+    /* border-bottom: 1px solid rgba(235, 235, 235, 0.3);    */
+    border-bottom: 1px solid red;
+}
+
+main .try {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px 40px 30px;
+}
+
+main .try h2 {
+    margin: 30px 0 5px 0 ;
+}
+
+main .try input {
+    align-self: stretch;
+    height: 55px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+    padding: 15px;
+    color: #757575;   
+    margin: 15px 0 0 0;
+}
+
+main .try button {
+    align-self: stretch;
+    height: 55px;
+    border-radius: 5px;
+    border: 0;
+    background-color: #4549A9;
+    color: white; 
+    margin: 25px 0 15px 0;
+    font-weight: bold; 
+}
+
+footer .subfooter1 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 30px 40px 30px;
+}
+
+footer .subfooter1 img {
+    height: 100px;
+}
+
+footer .links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start; 
+}
+
+.links ul {
+    list-style: none;     
+    margin: 10px 40px 10px 0; 
+}
+
+.links li {
+    padding: 15px 0 0 0;    
+}
+
+.link-title {
+    font-weight: bold;
+}
+
+footer .subfooter2 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background-color: #F5F5F5;
+    padding: 20px 30px 40px 30px;
+}
+
+.subfooter2 ul {
+    display: inline-flex;
+}
+
+.flag-redes img {
+    height: 30px;
+}

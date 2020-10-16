@@ -8,8 +8,14 @@ nav grey: #5b5e6d;
 */
 
 /* Investigar para que funciona este bloque, lo he visto en varios ejemplos */
+/* 
+    With box-sizing: border-box -> the width you set will applied
+    at the border-level and not at the inner-content level
+*/
+
 * {
-    box-sizing: border-box;
+    
+    box-sizing: border-box; 
     margin: 0;
     padding: 0;
 }
@@ -18,11 +24,13 @@ h1, h2 {
     color: #2C303F;
 }
 
+
+
 p, li, input, button {
     font-family: 'Quicksand', sans-serif;
     font-size: 17px;
     color: #5b5e6d;
-    margin: 10px 0;
+    margin: 10px 0;    
 }
 
 nav {    
@@ -148,3 +156,22 @@ footer img {
     height: auto;
 }
 
+.subfooter1 {
+    justify-content: center;
+    padding: 2% 8%;
+    text-align: center;
+}
+
+
+
+
+.subfooter2 {    
+    justify-content: center;
+    padding: 2% 8%;
+    text-align: center;    
+    background-color: #F4F3F4;   
+}
+
+.subfooter2 ul {    
+    list-style: none;
+} 
