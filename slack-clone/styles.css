@@ -71,14 +71,14 @@ header {
     padding: 20px 30px 0 30px;
 }
 
-header h1 {
+header .intro h1 {
     font-size: 30px;
     font-weight: bold;
     align-self: flex-start;
     padding: 0 60px 0 0;
 }
 
-header p {
+header .intro p {
     color: #5B5E6C;
 }
 
@@ -87,7 +87,13 @@ header .text-intro {
     font-size: 16px;
 }
 
-header input {
+header .intro div {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+}
+
+header .intro input {
     align-self: stretch;
     height: 55px;
     border-radius: 5px;
@@ -96,7 +102,7 @@ header input {
     color: #757575;   
 }
 
-header button {
+header .intro button {
     align-self: stretch;
     height: 55px;
     border-radius: 5px;
@@ -111,11 +117,13 @@ header img {
     width: 100%;
     height: auto;
     margin: 50px 0 0 0;
+    /* max-width: 350px;     */
 }
 
 main .logos {
     display: flex;
     flex-direction: column;
+    /* flex-flow: column wrap; */
     align-items: center;
     padding: 20px 30px 70px 30px;
     background-color: #F5F5F5;
@@ -142,29 +150,61 @@ main .logos button {
     font-weight: bold;
 }
 
-main .logos img {
-    width: 60%;
-    height: auto;
-    margin: 40px 0 40px;
+main .logos-images {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
-main .logos hr {
-    /* border-bottom: 1px solid rgba(235, 235, 235, 0.3);    */
-    border-bottom: 1px solid red;
+main .logos-images img {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    /* margin: 40px; */
+    margin: 40px 60px;
 }
+
+
+/* .logos-images {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center; 
+}
+
+.logos-images {
+    align-self: center;
+} */
+
 
 main .try {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* flex-direction: column; */
+    flex-flow: row wrap;
+    justify-content: center;
+    /* align-items: center; */
     padding: 20px 30px 40px 30px;
 }
 
-main .try h2 {
+main .try-free {
+    align-self: center;
+}
+
+main .try-free h2 {
     margin: 30px 0 5px 0 ;
 }
 
-main .try input {
+main .input-button {
+    /* display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: stretch;
+}
+
+main .input-button input {
     align-self: stretch;
     height: 55px;
     border-radius: 5px;
@@ -174,7 +214,7 @@ main .try input {
     margin: 15px 0 0 0;
 }
 
-main .try button {
+main .input-button button {
     align-self: stretch;
     height: 55px;
     border-radius: 5px;
@@ -219,15 +259,98 @@ footer .links {
 footer .subfooter2 {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #F5F5F5;
     padding: 20px 30px 40px 30px;
 }
 
 .subfooter2 ul {
+    /* display: inline-flex; */
+    display: flex;
+    list-style: none;
+}
+
+.flag-redes {
     display: inline-flex;
 }
 
 .flag-redes img {
-    height: 30px;
+    height: 50px;
+}
+
+@media only screen and (min-width: 767px) {
+    header .intro h1 {
+        font-size: 60px;
+        font-weight: bold;
+        align-self: flex-start;
+        padding: 0 60px 0 0;
+    }
+
+    header .text-intro {
+        font-size: 20px;
+    }
+
+    header .intro div {
+        flex-direction: row;
+    }
+
+    header .intro input {
+        /* align-self: flex-start; */
+        width: 350px;
+
+    }
+
+    header .intro button {
+        align-self: flex-start;
+        width: 200px;
+    }
+
+    header .sign-in {
+        align-self: flex-start;
+    }
+
+    header img {
+        max-width: 350px;
+    } 
+
+    main .logos button {
+        align-self: center;
+        width: 200px;
+    }
+
+    main .try {
+        justify-content: space-between;
+    }
+
+    main .input-button {
+        flex-direction: row;
+    }
+
+    /* main .input-button input {
+        width: 200px;
+    }
+
+    main .input-button button {
+        width: 200px;
+    } */
+}
+
+@media only screen and (min-width: 962px) {
+    header {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    header .intro {
+        max-width: 50%;
+    }
+
+    header .intro input {
+        display: none;
+    }
+
+    header img {
+        /* align-self: flex-start;         */
+        max-width: 40%; 
+    }
 }

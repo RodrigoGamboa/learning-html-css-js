@@ -60,7 +60,7 @@
                     where their work happens.
                 </p>
                 <button>DISCOVER WHY</button>
-                <div class="logos-images">
+                <!-- <div class="logos-images"> -->
                     <img src="images/airbnb-logo.png" alt="airbnb-logo">
                     <hr>
                     <img src="images/capital-one-logo.png" alt="capitol-one-logo">
@@ -72,21 +72,16 @@
                     <img src="images/oracle-logo.png" alt="oracle-logo">
                     <hr>
                     <img src="images/ticketmaster-logo.png" alt="ticketmaster-logo">
-                </div>                
+                <!-- </div>                 -->
             </div>
             <!-- Sección de logos - Final -->
             
             <!-- Sección de prueba -->
             <div class="try">
-                <div class="try-free">
-                    <h2>Try it for free</h2>
-                    <p>Already using Slack? <a href="#">Sign in</a>.</p>        
-                </div>
-                <div class="input-button">
-                    <input type="email" name="" id="" placeholder="Email address">
-                    <button>GET STARTED</button>
-                </div>
-                
+                <h2>Try it for free</h2>
+                <p>Already using Slack? <a href="#">Sign in</a>.</p>        
+                <input type="email" name="" id="" placeholder="Email address">
+                <button>GET STARTED</button>
             </div>
             <hr>
             <!-- Sección de prueba - Final -->
@@ -158,3 +153,325 @@
         </footer>
     </body>
 </html>
+
+/* Colores */
+/*
+background-grey: #F4F3F4;
+button-purple: #192592
+main-titles dark-grey: #2C303F;
+paragraph grey: #5b5e6d;
+nav grey: #5b5e6d;
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #333746;
+}
+
+p, li, input, button {
+    font-family: 'Quicksand', sans-serif;
+}
+
+p, li {
+    color: #5B5E6C; 
+}
+
+a {
+    color: #4549A9;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    background-color: white;
+
+    /* ¿Por qué position: sticky? */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul div {
+    width: 23px;
+    height: 3px;
+    background-color: #6D6F7A;
+    margin: 4px 0;
+}
+
+body hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);   
+}
+
+header {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px 0 30px;
+}
+
+header .intro h1 {
+    font-size: 30px;
+    font-weight: bold;
+    align-self: flex-start;
+    padding: 0 60px 0 0;
+}
+
+header .intro p {
+    color: #5B5E6C;
+}
+
+header .text-intro {    
+    margin: 30px 0;
+    font-size: 16px;
+}
+
+header .intro div {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+}
+
+header .intro input {
+    align-self: stretch;
+    height: 55px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+    padding: 15px;
+    color: #757575;   
+}
+
+header .intro button {
+    align-self: stretch;
+    height: 55px;
+    border-radius: 5px;
+    border: 0;
+    background-color: #4549A9;
+    color: white; 
+    margin: 0 0 15px 0; 
+    font-weight: bold;    
+}
+
+header img {
+    width: 100%;
+    height: auto;
+    margin: 50px 0 0 0;
+    /* max-width: 350px;     */
+}
+
+main .logos {
+    display: flex;
+    flex-direction: column;
+    /* flex-flow: column wrap; */
+    align-items: center;
+    padding: 20px 30px 70px 30px;
+    background-color: #F5F5F5;
+}
+
+main .logos h2 {
+    margin: 30px 0 0 0;
+    font-size: 30px;
+}
+
+main .logos p {
+    text-align: center;
+    margin: 20px 0;
+}
+
+main .logos button {
+    align-self: stretch;
+    height: 55px;
+    border-radius: 5px;
+    border: 1px solid rgba(69, 72, 168, 0.8);    
+    background-color: white;
+    color: #4549A9;
+    margin: 15px 0 15px 0; 
+    font-weight: bold;
+}
+
+.logos img {
+    width: 60%;
+    height: auto;
+    margin: 40px 0 40px;
+}
+/* .logos-images {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center; 
+}
+
+.logos-images {
+    align-self: center;
+} */
+
+main .logos hr {
+    /* border-bottom: 1px solid rgba(235, 235, 235, 0.3);    */
+    border-bottom: 1px solid red;
+}
+
+main .try {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px 40px 30px;
+}
+
+main .try h2 {
+    margin: 30px 0 5px 0 ;
+}
+
+main .try input {
+    align-self: stretch;
+    height: 55px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+    padding: 15px;
+    color: #757575;   
+    margin: 15px 0 0 0;
+}
+
+main .try button {
+    align-self: stretch;
+    height: 55px;
+    border-radius: 5px;
+    border: 0;
+    background-color: #4549A9;
+    color: white; 
+    margin: 25px 0 15px 0;
+    font-weight: bold; 
+}
+
+footer .subfooter1 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 30px 40px 30px;
+}
+
+footer .subfooter1 img {
+    height: 100px;
+}
+
+footer .links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start; 
+}
+
+.links ul {
+    list-style: none;     
+    margin: 10px 40px 10px 0; 
+}
+
+.links li {
+    padding: 15px 0 0 0;    
+}
+
+.link-title {
+    font-weight: bold;
+}
+
+footer .subfooter2 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    background-color: #F5F5F5;
+    padding: 20px 30px 40px 30px;
+}
+
+.subfooter2 ul {
+    /* display: inline-flex; */
+    display: flex;
+    list-style: none;
+}
+
+.flag-redes {
+    display: inline-flex;
+}
+
+.flag-redes img {
+    height: 50px;
+}
+
+@media only screen and (min-width: 767px) {
+    body {
+        border: solid 1px red;
+    }
+
+    header .intro h1 {
+        font-size: 60px;
+        font-weight: bold;
+        align-self: flex-start;
+        padding: 0 60px 0 0;
+    }
+
+    header .text-intro {
+        font-size: 20px;
+    }
+
+    header .intro div {
+        flex-direction: row;
+    }
+
+    header .intro input {
+        /* align-self: flex-start; */
+        width: 350px;
+
+    }
+
+    header .intro button {
+        align-self: flex-start;
+        width: 200px;
+    }
+
+    header .sign-in {
+        align-self: flex-start;
+    }
+
+    header img {
+        max-width: 350px;
+    } 
+
+    main .logos button {
+        align-self: center;
+        width: 200px;
+    }
+}
+
+@media only screen and (min-width: 962px) {
+    header {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    header .intro {
+        max-width: 50%;
+    }
+
+    header .intro input {
+        display: none;
+    }
+
+    header img {
+        /* align-self: flex-start;         */
+        max-width: 40%; 
+    }
+}
