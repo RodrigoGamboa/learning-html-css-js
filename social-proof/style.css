@@ -1,0 +1,105 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+Very Dark Magenta: hsl(300, 43%, 22%)
+Soft Pink: hsl(333, 80%, 67%)
+
+### Neutral
+
+Dark Grayish Magenta: hsl(303, 10%, 53%)
+Light Grayish Magenta: hsl(300, 24%, 96%)
+White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Spartan](https://fonts.google.com/specimen/Spartan)
+- Weights: 400, 500, 700
+
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 90px 30px;
+}
+
+/* INTRO */
+
+#intro {
+    border: solid 1px red;
+    text-align: center;
+}
+
+/* REVIEWS */
+
+#reviews {
+    border: solid 1px red;    
+}
+
+.stars-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+
+    background: blue;
+    border: blue;
+    border-radius: 5px;    
+}
+
+.stars {
+    margin: 0 10px;
+}
+
+/* COMMENTS */
+
+#comments {
+    border: solid 1px red;
+}
+
+@media only screen and (min-width: 767px) {
+    body {
+        flex-flow: row wrap;
+        padding: 10%;
+    }
+
+    #intro, #reviews {
+        width: 50%;
+    }
+
+    #intro {
+        text-align: left;
+    }
+
+    .stars-text {
+        flex-direction: row;
+    }
+
+}

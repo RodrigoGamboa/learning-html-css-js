@@ -57,6 +57,10 @@ nav ul div {
     margin: 4px 0;
 }
 
+nav .menu {
+    display: none;
+}
+
 body hr {
     border: 0;
     height: 0;
@@ -117,13 +121,11 @@ header img {
     width: 100%;
     height: auto;
     margin: 50px 0 0 0;
-    /* max-width: 350px;     */
 }
 
 main .logos {
     display: flex;
     flex-direction: column;
-    /* flex-flow: column wrap; */
     align-items: center;
     padding: 20px 30px 70px 30px;
     background-color: #F5F5F5;
