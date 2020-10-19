@@ -41,6 +41,9 @@ White: hsl(0, 0%, 100%)
 }
 
 body {    
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -58,25 +61,41 @@ body {
 /* REVIEWS */
 
 #reviews {
-    border: solid 1px red;    
+    border: solid 1px red;
+    /* align-self: stretch;     */
 }
 
-.stars-text {
+.stars-review {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+
+    background: #F7F1F7;
+    border: solid 1px #F7F1F7;
+    border-radius: 8px;
     
-
-
-    background: blue;
-    border: blue;
-    border-radius: 5px;    
+    padding: 10px 50px;
+    margin: 10px 0;
 }
 
 .stars {
-    margin: 0 10px;
+    padding: 0 0 2px 0;
+    margin: 0 10px 0 0;
 }
+
+.stars img {
+    margin: 0 2px 0 2px;
+}
+
+.stars-text {
+    padding: 5px 0 0 0;
+    color: #521D4F;
+    
+    font-weight: 700;
+}
+
+
 
 /* COMMENTS */
 
@@ -98,8 +117,13 @@ body {
         text-align: left;
     }
 
-    .stars-text {
-        flex-direction: row;
+    #reviews {
+        justify-content: space-between;
     }
 
+    .stars-review {
+        flex-direction: row;
+        justify-content: space-around;        
+        /* width: 85%; */
+    }
 }
