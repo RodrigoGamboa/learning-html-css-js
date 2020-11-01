@@ -146,17 +146,21 @@ function selectRandom(cardArray) {
 // console.log(selectRandom(weaponsArray));
 
 function pickMystery() {
-    var mystery = [
-        selectRandom(suspectsArray),
-        selectRandom(weaponsArray),
-        selectRandom(roomsArray)        
-    ];
+    var mystery = {
+        suspect: selectRandom(suspectsArray),
+        weapon: selectRandom(weaponsArray),
+        room: selectRandom(roomsArray)        
+    };
     return mystery;
 }
 //console.log(pickMistery());
 
 // ITERATION 3
 function revealMystery(envelope) {
-    return console.log(`${envelope[0].firstName} ${envelope[0].lastName} killed Mr. Boddy using the ${envelope[1].name} in the ${envelope[2].name}!`);
+    return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
 }
 revealMystery(pickMystery());
+
+// for(let i = 0; i < 20; i++) {
+//     revealMystery(pickMystery());
+// }
