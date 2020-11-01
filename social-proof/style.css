@@ -42,7 +42,7 @@ White: hsl(0, 0%, 100%)
 
 body {    
     font-family: 'Spartan', sans-serif;
-    font-size: 15px;
+    font-size: 13px;
 
     display: flex;
     flex-direction: column;
@@ -54,37 +54,53 @@ body {
 /* INTRO */
 
 #intro {
-    border: solid 1px red;
+    /* border: solid 1px red; */
     text-align: center;
+
+    margin: 0 0 20px 0;
+}
+
+#intro h1 {
+    color: #521D4F;     
+    font-size: 40px;
+
+    margin: 0 0 10px 0;
 }
 
 /* REVIEWS */
 
 #reviews {
-    border: solid 1px red;
-    /* align-self: stretch;     */
-}
-
-.stars-review {
+    /* border: solid 1px red;     */
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    align-items: center;
+}
+
+.stars-review {    
+    display: flex;
+    flex-direction: column;
     align-items: center;
 
+    width: 100%;    
     background: #F7F1F7;
     border: solid 1px #F7F1F7;
     border-radius: 8px;
     
-    padding: 10px 50px;
+    padding: 10px 10px;
     margin: 10px 0;
+    
 }
 
 .stars {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
     padding: 0 0 2px 0;
     margin: 0 10px 0 0;
 }
 
-.stars img {
+.stars img {    
     margin: 0 2px 0 2px;
 }
 
@@ -95,12 +111,62 @@ body {
     font-weight: 700;
 }
 
-
-
 /* COMMENTS */
 
-#comments {
-    border: solid 1px red;
+#comments {        
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    margin: 20px 0 0 0;
+}
+
+.comments-block {
+    background: #521D4F;     
+    border: solid 1px #521D4F;
+    border-radius: 4px;
+    display: flex;    
+    flex-direction: column; 
+    
+    padding: 30px 25px; 
+    margin: 10px 0;   
+}
+
+.comments-block img{
+    border-radius: 50%;
+    width: 35px;
+}
+
+.img-name {      
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin: 0 0 30px 0;
+}
+
+.titles {    
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+.comment-name {
+    color: white;
+    font-weight: 700;
+    margin: 2px 0;
+}
+
+.comment-job {
+    color: #C671A9;
+    font-weight: 400;
+    margin: 2px 0;
+}
+
+.comment-text {
+    color: white;
+    font-weight: 400;
 }
 
 @media only screen and (min-width: 767px) {
@@ -115,15 +181,43 @@ body {
 
     #intro {
         text-align: left;
-    }
-
-    #reviews {
-        justify-content: space-between;
+        padding: 0 10% 0 0;
     }
 
     .stars-review {
-        flex-direction: row;
-        justify-content: space-around;        
-        /* width: 85%; */
+        flex-direction: row;                     
+        justify-content: center;        
+        width: 80%;
+        
+        padding: 10px 20px;
+        margin: 10px 0;        
     }
+
+    #first-review {
+        align-self: flex-start;
+    }
+    
+    #third-review {
+        align-self: flex-end;
+    }    
+
+    #comments {
+        flex-direction: row;        
+        justify-content: space-between; 
+        
+        margin: 10px 0 0 0;
+    }
+
+    .comments-block {
+        width: 30%; 
+        height: auto;       
+    }
+    
+    /* #second-comment {
+        margin: 30px  0 0 0;
+    }
+
+    #third-comment {
+        margin: 60px 0 0 0;
+    } */
 }
