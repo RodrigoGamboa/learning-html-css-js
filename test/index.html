@@ -1,46 +1,64 @@
-<!-- <!DOCTYPE html>
-<html lang="en-US">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Today's Date</title>
-    <script src="src/sketch.js"></script>
-</head>
-
+<style>
+  svg {
+    background-color: pink;
+  }
+</style>
+<script src="https://d3js.org/d3.v6.min.js"></script>
 <body>
-    <script>
-        let d = new Date;
-        alert(`Today's date is ${d}.`);
-        document.body.innerHTML = `<h1>Hola mundo! La fecha de hoy es ${d}</h1>`;
-    </script>
-</body>
+  <script>
+    const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+    
+    // Variables que marcan el ancho y alto del SVG background.
+    const w = 500;
+    const h = 200;
+    
+    //Esta sección es básicamente para el background.
+    const svg = d3.select('body')
+                  .append('svg')
+                  .attr('width', w)
+                  .attr('height', h);
 
-</html> -->
+     // Esta sección dibuja un solo rectángulo de un determinado ancho y alto, en el origen.
+    //  svg.append('rect')
+    //     .attr('width', 25)
+    //     .attr('height', 100)
+    //     .attr('x', 0)
+    //     .attr('y', 0);
 
-<!DOCTYPE html>
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <script type="application/javascript">
-    function draw() {
-      var canvas = document.getElementById('canvas');
-      if (canvas.getContext) {
-        var ctx = canvas.getContext('2d');
+   // Esta sección dibuja todos los rectángulos de un determinado ancho y alto, pero desplaza la x
+   // de acuerdo al index de cada dato y lo multiplica por 30 para separarlos.
+    // svg.selectAll('rect')
+    //     .data(dataset)
+    //     .enter()
+    //     .append('rect')
+    //     .attr('width', 25)
+    //     .attr('height', 100)
+    //     .attr('x', (d,i) => i*30)
+    //     .attr('y', 0);
 
-        ctx.fillStyle = 'rgb(200, 0, 0)';
-        ctx.fillRect(10, 10, 50, 50);
+   // Esta sección dibuja todos los rectángulos de un determinado ancho y alto, pero además de 
+   // desplazar la x como en el anterior, relaciona la altura del rectángulo height con el dato
+   // y se multiplica por 3 para escalarlo. El resultado es una gráfica de cabeza.
+  //  svg.selectAll('rect')
+  //     .data(dataset)
+  //     .enter()
+  //     .append('rect')
+  //     .attr('width', 25)
+  //     .attr('height', (d,i) => d*3)
+  //     .attr('x', (d,i) => i*30)
+  //     .attr('y', 0);
 
-        ctx.fillStyle = 'rgba(0, 0, 200, 0.5)';
-        ctx.fillRect(30, 30, 50, 50);
-
-        ctx.fillStyle = 'rgba(0, 255, 0, 0.3)';
-        ctx.strokeRect(0, 0, 100, 100)
-      }
-    }
+   // Esta sección modifica la y, restandole la altura de los rectángulos a la altura total del SVG,
+   // dejando correcta la orientación de la gráfica. Además utiliza el atributo fill para colorear
+   // los rectángulos.
+   svg.selectAll('rect')
+      .data(dataset)
+      .enter()
+      .append('rect')
+      .attr('width', 25)
+      .attr('height', d => d*3)
+      .attr('x', (d,i) => i*30)
+      .attr('y', d => h-d*3)
+      .attr('fill', 'navy');
   </script>
- </head>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
-</html>
+</body>
