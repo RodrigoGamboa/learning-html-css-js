@@ -9,6 +9,7 @@ let minDec = document.getElementById('minDec');
 let minUni = document.getElementById('minUni');
 let secDec = document.getElementById('secDec');
 let secUni = document.getElementById('secUni');
+let milCen = document.getElementById('milCen');
 let milDec = document.getElementById('milDec');
 let milUni = document.getElementById('milUni');
 let splits = document.getElementById('splits');
@@ -17,9 +18,9 @@ setInterval(printTime, 1);
 
 function printTime() {
   // ... your code goes here
-  // return secUni.innerHTML = chronometer.twoDigitsNumber(chronometer.getSeconds());
   printSeconds();
   printMinutes();
+  printMilliseconds();
 }
 
 function printMinutes() {
@@ -39,6 +40,12 @@ function printSeconds() {
 // ==> BONUS
 function printMilliseconds() {
   // ... your code goes here
+  // let milliseconds = chronometer.threeDigitNumber(chronometer.getMilliseconds());
+  // milCen.innerHTML = milliseconds[2];
+  // milDec.innerHTML = milliseconds[1];
+  // milUni.innerHTML = milliseconds[0];
+  let milliseconds = chronometer.getMilliseconds();
+  milUni.innerHTML = milliseconds;
 }
 
 function printSplit() {
@@ -48,7 +55,7 @@ function printSplit() {
 function clearSplits() {
   // ... your code goes here
   let splits = document.getElementById('splits');
-  // document.getElementById('splits').removeChild(split);
+  //Ref: https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild
   while (splits.firstChild) {
     splits.removeChild(splits.firstChild);
   }
