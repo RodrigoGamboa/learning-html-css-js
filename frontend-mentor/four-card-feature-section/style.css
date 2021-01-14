@@ -1,0 +1,63 @@
+/* <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    border: 1px solid red;
+    text-align: center;
+}
+
+main {
+    /* Aquí voy a jugar con flex para ordenar las cards    */
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    /* box-shadow: 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3); */
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    margin: 10px 10px;
+}
+
+.card img {
+    align-self: flex-end;
+}
+
+.wrap-cards {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Versión desktop */
+
+@media only screen and (min-width: 376px) {
+    main {
+        flex-direction: row;
+        align-items: center;
+    }
+}

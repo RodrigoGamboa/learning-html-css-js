@@ -39,7 +39,9 @@ hr {
     flex-direction: column;
     align-items: center;
     padding: 100px 50px 30px 50px;
-    width: 375px;
+    /* width: 375px; */
+    width: 100%;
+    max-width: 375px;
     border-radius: 15px;
     background-size: contain;
     background-image: url("images/bg-pattern-card.svg");
