@@ -22,7 +22,10 @@ body {
 
 header {
     text-align: center;
-    margin: 80px 10px 65px 10px;
+    /* margin: 80px 10px 65px 10px; */
+    border: 2px dotted red;
+    display: inline;
+    /* margin: 5rem 0.625rem 4rem 0.625rem; */
 }
 
 h1 {
@@ -81,8 +84,8 @@ main {
 
 @media only screen and (min-width: 376px) {
     header {
-        max-width: 450px;
-        margin: 60px 0 10px 0;
+        /* max-width: 450px; */
+        /* margin: 60px 0 10px 0; */
     }
     main {
         flex-direction: row;
